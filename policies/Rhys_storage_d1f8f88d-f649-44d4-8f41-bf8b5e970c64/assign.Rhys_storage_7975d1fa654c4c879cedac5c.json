@@ -26,6 +26,6 @@
  },
  "id": "/subscriptions/ee90d10f-9da8-46b4-945a-3ca8fb227bbd/providers/Microsoft.Authorization/policyAssignments/123456789asdfasdfasdfads",
  "type": "Microsoft.Authorization/policyAssignments",
- "name": "asdfasdfasdfasdftesst",
+ "name": "123456789asdfasdfasdfads",
  "location": "eastus"
 }
