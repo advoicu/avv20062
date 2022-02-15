@@ -24,8 +24,8 @@
   },
   "enforcementMode": "Default"
  },
- "id": "/subscriptions/ee90d10f-9da8-46b4-945a-3ca8fb227bbd/providers/Microsoft.Authorization/policyAssignments/7975d1fa654c4c879cedac5c",
+ "id": "/subscriptions/ee90d10f-9da8-46b4-945a-3ca8fb227bbd/providers/Microsoft.Authorization/policyAssignments/123456789asdfasdfasdfads",
  "type": "Microsoft.Authorization/policyAssignments",
- "name": "7975d1fa654c4c879cedac5c",
+ "name": "asdfasdfasdfasdftesst",
  "location": "eastus"
 }
