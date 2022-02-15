@@ -1,0 +1,37 @@
+{
+ "sku": {
+  "name": "A0",
+  "tier": "Free"
+ },
+ "properties": {
+  "displayName": "Allowed locations",
+  "policyDefinitionId": "/providers/Microsoft.Authorization/policyDefinitions/e56962a6-4747-49cd-b67b-bf8b01975c4c",
+  "scope": "/subscriptions/ee90d10f-9da8-46b4-945a-3ca8fb227bbd",
+  "notScopes": [],
+  "parameters": {
+   "listOfAllowedLocations": {
+    "value": [
+     "asiapacific",
+     "australiacentral",
+     "australiacentral2",
+     "australiaeast",
+     "australiasoutheast"
+    ]
+   }
+  },
+  "metadata": {
+   "assignedBy": "Adrian Hompoth-Voicu",
+   "parameterScopes": {
+    "listOfAllowedLocations": "/subscriptions/ee90d10f-9da8-46b4-945a-3ca8fb227bbd"
+   },
+   "createdBy": "f0cb3bf0-429f-4de9-a739-90e741757457",
+   "createdOn": "2022-02-15T15:20:42.0564938Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "enforcementMode": "Default"
+ },
+ "id": "/subscriptions/ee90d10f-9da8-46b4-945a-3ca8fb227bbd/providers/Microsoft.Authorization/policyAssignments/8f6a9b1a5f3c48bc8c2eedd1",
+ "type": "Microsoft.Authorization/policyAssignments",
+ "name": "8f6a9b1a5f3c48bc8c2eedd1"
+}
