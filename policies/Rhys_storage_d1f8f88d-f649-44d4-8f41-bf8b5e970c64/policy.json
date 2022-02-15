@@ -1,0 +1,70 @@
+{
+ "properties": {
+  "displayName": "Rhys storage",
+  "policyType": "Custom",
+  "mode": "All",
+  "metadata": {
+   "createdBy": "f0cb3bf0-429f-4de9-a739-90e741757457",
+   "createdOn": "2021-09-17T10:20:43.7148843Z",
+   "updatedBy": null,
+   "updatedOn": null
+  },
+  "parameters": {},
+  "policyRule": {
+   "if": {
+    "allOf": [
+     {
+      "field": "type",
+      "equals": "Microsoft.Storage/storageAccounts"
+     }
+    ]
+   },
+   "then": {
+    "effect": "DeployIfNotExists",
+    "details": {
+     "type": "Microsoft.Storage/storageAccounts",
+     "existenceCondition": {
+      "field": "Microsoft.Storage/storageAccounts/minimumTlsVersion",
+      "equals": "TLS1_2"
+     },
+     "deployment": {
+      "properties": {
+       "mode": "incremental",
+       "template": {
+        "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+        "contentVersion": "1.0.0.0",
+        "parameters": {
+         "StorageName": {
+          "type": "string"
+         }
+        },
+        "resources": [
+         {
+          "type": "Microsoft.Storage/storageAccounts",
+          "apiVersion": "2021-06-01",
+          "location": "northeurope",
+          "name": "[concat(parameters('StorageName'))]",
+          "properties": {
+           "minimumTlsVersion": "TLS1_2"
+          }
+         }
+        ]
+       },
+       "parameters": {
+        "StorageName": {
+         "value": "[field('Name')]"
+        }
+       }
+      }
+     },
+     "roleDefinitionIds": [
+      "/providers/Microsoft.Authorization/roleDefinitions/b24988ac-6180-42a0-ab88-20f7382dd24c"
+     ]
+    }
+   }
+  }
+ },
+ "id": "/subscriptions/ee90d10f-9da8-46b4-945a-3ca8fb227bbd/providers/Microsoft.Authorization/policyDefinitions/d1f8f88d-f649-44d4-8f41-bf8b5e970c64",
+ "type": "Microsoft.Authorization/policyDefinitions",
+ "name": "d1f8f88d-f649-44d4-8f41-bf8b5e970c64"
+}
